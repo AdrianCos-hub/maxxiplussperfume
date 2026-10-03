@@ -13,19 +13,537 @@
       property="og:description"
       content="Editorial wewangian botani mewah. Diracik di Painan, Sumatera Barat."
     />
-    <meta property="og:image" content="image/logo.png" />
-    <link rel="icon" type="image/png" href="image/logo.png" />
+    <meta property="og:image" content="/image/logo.png" />
+    <link rel="icon" type="image/png" href="/image/logo.png" />
 
-    <!-- Cormorant Garamond & Plus Jakarta Sans Typefaces -->
+    <!-- Cormorant Garamond & Plus Jakarta Sans Typefaces (Haute Parfumerie Luxury Editorial Typography) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- Canvas Animasi Latar Aromatic Scent Mist & Partikel Esens Parfum Botani -->
+    <canvas id="perfume-ambient-canvas" class="perfume-ambient-canvas" aria-hidden="true"></canvas>
+
+    <!-- Darkroom Ambient Spotlight (Mengikuti pergerakan kursor secara halus) -->
+    <div id="darkroom-lightbeam" class="darkroom-lightbeam"></div>
+
+    <!-- NAVIGASI UTAMA -->
+    <header class="top-nav">
+      <a href="#" class="nav-brand-lockup">
+        <span class="nav-logo-mark">MAXXIPLUSS</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#catalog" class="nav-link">KOLEKSI</a>
+        <a href="#discovery-set" class="nav-link">DISCOVERY SET</a>
+        <a href="#scent-quiz" class="nav-link">PANDUAN AROMA</a>
+        <a href="#outlets" class="nav-link">GERAI</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="btn-cart-nav" class="nav-cart-btn" aria-label="Buka Keranjang Pesanan">
+          <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-btn-text">KERANJANG</span>
+        </button>
+        <button id="btn-mobile-menu" class="hamburger-btn" aria-label="Buka Menu Navigasi Mobile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- MOBILE NAVIGATION SLIDING DRAWER -->
+    <div id="mobile-nav-backdrop" class="mobile-nav-backdrop" aria-hidden="true"></div>
+    <aside id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Menu Navigasi Mobile">
+      <div class="mobile-nav-header">
+        <span class="nav-logo-mark">MAXXIPLUSS</span>
+        <button id="btn-close-mobile-menu" class="mobile-nav-close-btn" aria-label="Tutup Menu Mobile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile-nav-links">
+        <a href="#hero" class="mobile-nav-link">BERANDA</a>
+        <a href="#catalog" class="mobile-nav-link">KOLEKSI LENGKAP</a>
+        <a href="#discovery-set" class="mobile-nav-link">DISCOVERY SET</a>
+        <a href="#scent-quiz" class="mobile-nav-link">PANDUAN AROMA</a>
+        <a href="#outlets" class="mobile-nav-link">GERAI RESMI</a>
+      </nav>
+
+      <div class="mobile-nav-footer">
+        <div class="mobile-nav-meta">
+          <div class="meta-label">PAINAN, SUMATERA BARAT</div>
+          <div class="meta-desc">Ekstrak Rempah Alami & Cengkeh Pesisir</div>
+        </div>
+        <a href="https://wa.me/6281267890123" target="_blank" rel="noopener noreferrer" class="btn-pill-solid" style="width: 100%; justify-content: center;">
+          KONSULTASI VIA WHATSAPP
+        </a>
+      </div>
+    </aside>
+
+    <main class="site-content">
+      <!-- HERO EDITORIAL (2-Column Side-by-Side Layout) -->
+      <section id="hero" class="hero-editorial">
+        <div class="hero-two-column-layout motion-reveal">
+          
+          <!-- KOLOM KIRI: Content Statement & Actions -->
+          <div class="hero-left-col">
+            <div class="hero-meta-tagline">
+              <span>REMPAH ALAMI BOTANI</span>
+              <span class="text-ember">— PAINAN, SUMATERA BARAT</span>
+            </div>
+
+            <h1 class="display-title hero-left-title">
+              KEMEWAHAN AROMA REMPAH SEJATI.
+            </h1>
+
+            <p class="hero-subheading-desc">
+              Racikan rempah dan cengkeh alami khas Painan. Menghadirkan wewangian mewah berkarakter kuat yang bertahan hingga 24 jam.
+            </p>
+
+            <!-- Specs Grid Ringkas -->
+            <div class="hero-specs-list">
+              <div class="spec-cell">
+                <div class="spec-label">METODE EKSTRAKSI</div>
+                <div class="spec-val">MASERASI DINGIN</div>
+              </div>
+              <div class="spec-cell">
+                <div class="spec-label">KETAHANAN WANGI</div>
+                <div class="spec-val">HINGGA 24 JAM</div>
+              </div>
+              <div class="spec-cell">
+                <div class="spec-label">NADA AROMA UTAMA</div>
+                <div class="spec-val">CENGKEH SUMATERA</div>
+              </div>
+              <div class="spec-cell">
+                <div class="spec-label">JEJAK PROYEKSI</div>
+                <div class="spec-val">SANGAT SEMERBAK</div>
+              </div>
+            </div>
+
+            <!-- Tombol Aksi Utama -->
+            <div class="hero-action-buttons">
+              <a href="#catalog" class="btn-pill-solid">
+                <span>JELAJAHI KOLEKSI</span>
+              </a>
+              <a href="#discovery-set" class="btn-ghost-outline">
+                <span>COBA DISCOVERY SET</span>
+              </a>
+            </div>
+
+            <div class="hero-footnote-line">
+              <span>KONSENTRAT BOTANI TERKURASI — 30ML · 50ML · 100ML</span>
+            </div>
+          </div>
+
+          <!-- KOLOM KANAN: Botol Parfum Utama & Ambient Gold Glow -->
+          <div class="hero-right-col">
+            <div class="hero-bottle-stage" id="hero-tilt-frame">
+              <div class="hero-ambient-glow" aria-hidden="true"></div>
+              <img src="/image/foto3.jpeg" alt="Maxxipluss Grand Heritage 24K Extrait" class="hero-bottle-img" />
+              <div class="hero-bottle-badge">
+                <span class="badge-title">GRAND HERITAGE 24K</span>
+                <span class="badge-sub">EXTRAIT DE PARFUM</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- MODUL: MAXXIPLUSS DISCOVERY SET / BELI SAMPLE -->
+      <section id="discovery-set" class="discovery-editorial-section void-section">
+        <div class="discovery-container motion-reveal">
+          
+          <!-- Header Bagian -->
+          <div class="discovery-header-block">
+            <div class="editorial-subheading" style="margin-bottom: 8px;">
+              EKSPEDISI AROMA — COBA SEBELUM MEMBELI BOTOL BESAR
+            </div>
+            <h2 class="heading-title" style="margin-bottom: 16px;">
+              MAXXIPLUSS DISCOVERY SET.
+            </h2>
+            <p class="editorial-body" style="max-width: 760px; margin: 0 auto;">
+              Eksplorasi wewangian botani rempah khas Painan langsung pada kulit Anda. Setiap paket menghadirkan botol mini vial kaca amber 5ml dengan precision mist atomizer, dikemas dalam hardbox eksklusif berembos foil emas dan dilengkapi voucher potongan harga untuk pembelian botol besar berikutnya.
+            </p>
+          </div>
+
+          <div class="discovery-interactive-card">
+            <!-- Kolom Kiri: Visual Mockup Box Sampel & Botol Mini Vials -->
+            <div class="discovery-visual-wrap">
+              <div class="discovery-box-mockup">
+                <div class="discovery-box-header">
+                  <span class="discovery-box-badge">5ML MINI SPRAY VIALS</span>
+                  <span class="discovery-box-brand">MAXXIPLUSS</span>
+                </div>
+                
+                <!-- Rak Visual Botol Mini Sampel dengan Emas / Amber Accent -->
+                <div id="discovery-vials-tray" class="discovery-vials-tray">
+                  <!-- Dimuat dinamis oleh script.js sesuai varian terpilih -->
+                </div>
+
+                <div class="discovery-box-footer">
+                  <div class="discovery-box-voucher-tag">
+                    <span id="discovery-voucher-text">BONUS VOUCHER RP 20.000 DIDALAM KOTAK</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kolom Kanan: Konfigurator Paket & Pemilih Varian Aroma -->
+            <div class="discovery-controls-wrap">
+              <!-- Tab Pilihan Tipe Paket -->
+              <div class="discovery-tier-tabs">
+                <button type="button" class="discovery-tab-btn active" data-tier="trio">
+                  <span class="tab-title">TRIO DISCOVERY</span>
+                  <span class="tab-sub">3 Varian x 5ml · Rp 45.000</span>
+                </button>
+                <button type="button" class="discovery-tab-btn" data-tier="complete">
+                  <span class="tab-title">ALL VARIANT MASTER BOX</span>
+                  <span class="tab-sub">5 Varian x 5ml · Rp 75.000</span>
+                </button>
+              </div>
+
+              <!-- Petunjuk Pemilihan -->
+              <div class="discovery-selection-status">
+                <span class="status-label">PILIH VARIAN AROMA ANDA:</span>
+                <span id="discovery-counter-badge" class="counter-badge">3 / 3 Terpilih</span>
+              </div>
+
+              <!-- Daftar Opsi Varian Aroma (Interactive Chips/Pills) -->
+              <div id="discovery-scent-grid" class="discovery-scent-grid">
+                <!-- Dimuat dinamis oleh script.js -->
+              </div>
+
+              <!-- Baris Harga & Aksi -->
+              <div class="discovery-summary-box">
+                <div class="discovery-price-lockup">
+                  <div class="price-row-top">
+                    <span class="price-label">TOTAL HARGA DISCOVERY SET</span>
+                    <span id="discovery-total-price" class="discovery-price-val">Rp 45.000</span>
+                  </div>
+                  <div id="discovery-bonus-note" class="discovery-bonus-text">
+                    ✓ Hemat & Termasuk Voucher Belanja Botol Besar
+                  </div>
+                </div>
+
+                <div class="discovery-action-buttons">
+                  <button type="button" id="btn-add-discovery-cart" class="btn-pill-solid" style="flex: 1.2;">
+                    <span>TAMBAH KE KERANJANG</span>
+                  </button>
+                  <button type="button" id="btn-buy-discovery-wa" class="btn-ghost-outline" style="flex: 1;" title="Pesan langsung lewat WhatsApp">
+                    <span>BELI VIA WHATSAPP</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- KUIS PANDUAN AROMA INTERAKTIF -->
+      <section id="scent-quiz" class="editorial-section-block">
+        <div style="max-width: 900px; margin: 0 auto; margin-bottom: 40px;" class="motion-reveal">
+          <div style="font-size: 11px; color: var(--color-driftwood); letter-spacing: 2px; margin-bottom: 12px;">
+            PANDUAN — TEMUKAN KARAKTER
+          </div>
+          <h2 class="heading-title" style="margin-bottom: 16px;">
+            PANDUAN PEMILIHAN AROMA.
+          </h2>
+          <p class="editorial-body">
+            Jawab 3 pertanyaan singkat di bawah ini untuk mencocokkan suasana kegiatan, karakter diri, dan ketahanan aroma yang paling sesuai dengan Anda.
+          </p>
+        </div>
+
+        <div class="quiz-editorial-container motion-reveal">
+          <!-- Indikator Bar Garis Langkah -->
+          <div class="quiz-step-progress">
+            <div id="tick-1" class="step-tick active"></div>
+            <div id="tick-2" class="step-tick"></div>
+            <div id="tick-3" class="step-tick"></div>
+          </div>
+
+          <div id="quiz-dynamic-box">
+            <!-- Dimuat otomatis oleh script.js -->
+          </div>
+
+          <div id="quiz-result-editorial" style="display: none;">
+            <!-- Dimuat otomatis oleh script.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- KATALOG / KOLEKSI DENGAN HORIZONTAL SCROLL CAROUSEL -->
+      <section id="catalog" class="catalog-editorial-wrap">
+        <div class="catalog-header-bar motion-reveal">
+          <div class="catalog-header-top">
+            <div class="catalog-title-block">
+              <h2 class="heading-title catalog-heading">
+                SEMUA VARIAN PARFUM.
+              </h2>
+            </div>
+
+            <!-- Search Box Action -->
+            <div class="catalog-top-actions">
+              <div class="catalog-search-box">
+                <svg class="search-box-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input
+                  type="text"
+                  id="catalog-search-input"
+                  class="search-input-underline"
+                  placeholder="Cari varian atau aroma..."
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Filter Categories Row (Pill Buttons) -->
+          <div class="catalog-controls-group">
+            <div class="filter-links-row">
+              <button class="filter-link-btn active" data-filter="all">SEMUA KOLEKSI</button>
+              <button class="filter-link-btn" data-filter="pria">PRIA</button>
+              <button class="filter-link-btn" data-filter="wanita">WANITA</button>
+              <button class="filter-link-btn" data-filter="unisex">UNISEX</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Viewport & Horizontal Track -->
+        <div class="catalog-carousel-wrapper motion-reveal">
+          <div id="editorial-catalog-grid" class="catalog-carousel-track" role="region" aria-label="Daftar Produk Koleksi Maxxipluss">
+            <!-- Dimuat dinamis oleh script.js -->
+          </div>
+        </div>
+
+        <!-- Dynamic Progress Bar & Interactive Dots Pagination -->
+        <div class="catalog-carousel-footer motion-reveal">
+          <div class="carousel-progress-track">
+            <div id="catalog-progress-fill" class="carousel-progress-fill" style="width: 20%;"></div>
+          </div>
+
+          <div class="carousel-footer-meta">
+            <span class="carousel-hint-text">
+              <span class="hint-icon">⟷</span> GESER / SWIPE KE SAMPING UNTUK MENJELAJAHI KOLEKSI
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- GERAI FISIK RESMI -->
+      <section id="outlets" class="editorial-section-block">
+        <div style="max-width: 900px; margin: 0 auto; text-align: left;" class="motion-reveal">
+          <div style="font-size: 11px; color: var(--color-driftwood); letter-spacing: 2px; margin-bottom: 12px;">
+            GERAI FISIK RESMI
+          </div>
+          <h2 class="heading-title" style="margin-bottom: 16px;">
+            KUNJUNGI LANGSUNG.
+          </h2>
+          <p class="editorial-body">
+            Rasakan langsung aroma hasil ekstraksi dingin dan coba tester gratis di gerai resmi kami di Sumatera Barat.
+          </p>
+
+          <div class="outlets-editorial-grid">
+            <div class="outlet-box">
+              <div style="font-size: 10px; color: var(--color-driftwood); letter-spacing: 1.5px; margin-bottom: 8px;">LOKASI 01</div>
+              <h3 style="font-size: 20px; color: var(--color-warm-cream); margin-bottom: 8px;">OUTLET PAINAN</h3>
+              <p style="font-size: 14px; color: var(--color-driftwood); line-height: 1.5; margin-bottom: 20px;">
+                Pusat Kota Painan, Kabupaten Pesisir Selatan, Sumatera Barat.
+              </p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Outlet+Maxxipluss+Painan"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="outlet-maps-link"
+              >
+                <span>BUKA GOOGLE MAPS</span>
+              </a>
+            </div>
+
+            <div class="outlet-box">
+              <div style="font-size: 10px; color: var(--color-driftwood); letter-spacing: 1.5px; margin-bottom: 8px;">LOKASI 02</div>
+              <h3 style="font-size: 20px; color: var(--color-warm-cream); margin-bottom: 8px;">OUTLET KAMBANG</h3>
+              <p style="font-size: 14px; color: var(--color-driftwood); line-height: 1.5; margin-bottom: 20px;">
+                Jln. Raya Lintas Padang – Bengkulu, Kambang, Pesisir Selatan.
+              </p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Jln+Raya+Padang+Bengkulu+Kambang"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="outlet-maps-link"
+              >
+                <span>BUKA GOOGLE MAPS</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER LEGAL & SOSIAL MEDIA RESMI -->
+      <footer class="footer-editorial">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 30px;">
+          <div>
+            <div style="font-size: 16px; font-weight: 500; color: var(--color-warm-cream); letter-spacing: 2px;">
+              MAXXIPLUSS PERFUME
+            </div>
+            <div style="font-size: 12px; color: var(--color-driftwood); margin-top: 6px;">
+              Layanan Resmi: +62 822-8403-3320 · Painan, Sumatera Barat
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <a
+              href="https://wa.me/6282284033320"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-social-icon-btn"
+              aria-label="WhatsApp Resmi Maxxipluss (+62 822-8403-3320)"
+              title="Hubungi WhatsApp Resmi"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.031 2C6.495 2 2 6.495 2 12.031c0 1.905.534 3.687 1.458 5.216L2 22l4.908-1.428A10.01 10.01 0 0 0 12.031 22C17.567 22 22 17.505 22 12.031 22 6.495 17.567 2 12.031 2zm5.795 14.53c-.244.686-1.422 1.319-1.956 1.365-.515.044-1.189.062-3.83-1.028-3.177-1.31-5.215-4.544-5.374-4.756-.157-.212-1.28-1.705-1.28-3.253 0-1.547.81-2.308 1.097-2.622.288-.315.629-.393.839-.393.209 0 .419.002.602.012.194.01.453-.074.708.539.263.63.896 2.19.974 2.35.078.16.13.348.025.56-.104.212-.157.348-.313.535-.157.186-.33.415-.47.558-.157.158-.322.33-.138.647.184.316.818 1.349 1.755 2.184 1.205 1.074 2.22 1.406 2.535 1.564.315.157.498.131.682-.08.184-.21.785-.914.994-1.228.21-.314.419-.262.707-.156.289.105 1.832.864 2.146 1.021.314.157.524.236.602.367.079.131.079.76-.165 1.446z"/>
+              </svg>
+            </a>
+            <a
+              href="https://instagram.com/maxxiplussperfumesofficial"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-social-icon-btn"
+              aria-label="Instagram Resmi Maxxipluss"
+              title="Kunjungi Instagram Resmi"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-legal-micro">
+          * Diracik di Painan, Sumatera Barat menggunakan rempah botani lokal pilihan. © 2026 Maxxipluss Perfume. All rights reserved.
+        </div>
+      </footer>
+    </main>
+
+    <!-- SLIDE-OVER DRAWER KERANJANG BELANJA -->
+    <div id="cart-drawer-overlay" class="cart-drawer-overlay" aria-hidden="true"></div>
+    <aside id="cart-drawer-panel" class="cart-drawer-panel" aria-label="Keranjang Pesanan">
+      <div class="cart-drawer-header">
+        <div class="drawer-header-title">DAFTAR PESANAN SAYA</div>
+        <button id="cart-drawer-close" class="drawer-close-btn" aria-label="Tutup Keranjang Pesanan">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div id="cart-drawer-items" class="cart-drawer-body">
+        <!-- Dimuat otomatis oleh script.js -->
+      </div>
+
+      <div class="cart-drawer-footer">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 16px; font-size: 14px;">
+          <span style="color: var(--color-driftwood);">ESTIMASI SUBTOTAL:</span>
+          <span id="cart-subtotal-val" style="font-weight: 500; color: var(--color-warm-cream);">Rp 0</span>
+        </div>
+        <button id="cart-checkout-trigger" class="btn-pill-solid" style="width: 100%; justify-content: center;">
+          LANJUT KE PEMESANAN WHATSAPP
+        </button>
+      </div>
+    </aside>
+
+    <!-- MODAL DETAIL BOTOL PRODUK (ANIMATED LUXURY CARD) -->
+    <div id="product-detail-modal-backdrop" class="modal-editorial-backdrop product-detail-backdrop" aria-hidden="true">
+      <div class="product-detail-card-window">
+        <button id="btn-close-product-detail" class="detail-modal-close-btn" aria-label="Tutup Detail Botol">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div id="product-detail-card-content" class="product-detail-content-wrap">
+          <!-- Di-render dinamis oleh script.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL FORMULIR PEMESANAN (Underline Only Inputs) -->
+    <div id="modal-checkout-backdrop" class="modal-editorial-backdrop">
+      <div class="modal-editorial-window">
+        <button id="modal-checkout-close" style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: var(--color-warm-cream); font-size: 18px; cursor: pointer;">✕</button>
+        
+        <div style="margin-bottom: 24px;">
+          <div style="font-size: 10px; color: var(--color-driftwood); letter-spacing: 1.5px;">KONFIRMASI PESANAN</div>
+          <h3 style="font-size: 26px; color: var(--color-warm-cream); margin-top: 4px;">DATA PENGIRIMAN.</h3>
+        </div>
+
+        <form id="checkout-form">
+          <div style="margin-bottom: 20px;">
+            <label class="input-label-caps" for="cust-name">NAMA LENGKAP PENERIMA *</label>
+            <input type="text" id="cust-name" class="input-underline" placeholder="MASUKKAN NAMA LENGKAP ANDA" required />
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <label class="input-label-caps" for="cust-phone">NOMOR WHATSAPP AKTIF *</label>
+            <input type="tel" id="cust-phone" class="input-underline" placeholder="08XXXXXXXXXX" required />
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <label class="input-label-caps" for="cust-address">ALAMAT LENGKAP (JALAN, RT/RW, KELURAHAN, KECAMATAN, KOTA, KODE POS) *</label>
+            <input type="text" id="cust-address" class="input-underline" placeholder="MASUKKAN ALAMAT LENGKAP PENGIRIMAN" required />
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px;">
+            <div>
+              <label class="input-label-caps" for="cust-courier">PILIHAN EKSPEDISI</label>
+              <select id="cust-courier" class="input-underline" style="cursor: pointer; background: var(--color-walnut-shadow);">
+                <option value="J&T Express">J&T EXPRESS</option>
+                <option value="SiCepat">SICEPAT</option>
+                <option value="JNE">JNE</option>
+                <option value="Ambil Langsung di Outlet Painan">AMBIL LANGSUNG DI OUTLET PAINAN</option>
+                <option value="Ambil Langsung di Outlet Kambang">AMBIL LANGSUNG DI OUTLET KAMBANG</option>
+              </select>
+            </div>
+            <div>
+              <label class="input-label-caps" for="cust-notes">CATATAN KHUSUS</label>
+              <input type="text" id="cust-notes" class="input-underline" placeholder="MISAL: PACKING TEBAL / UNTUK HADIAH" />
+            </div>
+          </div>
+
+          <div id="checkout-items-summary" style="border: 1px dashed var(--color-cork-border); border-radius: var(--radius-cards); padding: 16px; margin-bottom: 24px;">
+            <!-- Ringkasan terisi otomatis -->
+          </div>
+
+          <button type="submit" class="btn-pill-solid" style="width: 100%; justify-content: center;">
+            KIRIM PESANAN KE WHATSAPP RESMI (+62 822-8403-3320)
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script type="module" src="script.js"></script>
   </body>
 </html>

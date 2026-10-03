@@ -13,7 +13,7 @@ export const productsData = [
     tag: "Best Seller",
     rating: 4.9,
     reviewCount: 142,
-    image: "image/foto1.jpeg",
+    image: "/image/foto1.jpeg",
     description: "Perpaduan rempah kayu manis Painan dengan cedarwood dan black pepper hangat. Memberikan persona pria karismatik, tegas, dan mewah yang tak terlupakan.",
     variants: [
       { size: "30ml", price: 35000, label: "Travel Size (30ml)" },
@@ -58,7 +58,7 @@ export const productsData = [
     tag: "Favorit Wanita",
     rating: 4.8,
     reviewCount: 118,
-    image: "image/foto2.jpeg",
+    image: "/image/foto2.jpeg",
     description: "Kombinasi melati putih nusantara, buah pir merah renyah, dan sentuhan bourbon vanilla lembut. Menggambarkan sosok wanita mandiri yang anggun, manis, dan berkelas.",
     variants: [
       { size: "30ml", price: 35000, label: "Travel Size (30ml)" },
@@ -103,7 +103,7 @@ export const productsData = [
     tag: "Signature 24 Jam",
     rating: 5.0,
     reviewCount: 236,
-    image: "image/foto3.jpeg",
+    image: "/image/foto3.jpeg",
     description: "Racikan mahakarya dengan konsentrat minyak wangi tertinggi. Mengangkat cengkeh pesisir selatan, saffron mewah, dan sentuhan oud lembut yang bertahan hingga 24 jam.",
     variants: [
       { size: "30ml", price: 50000, label: "Travel Size (30ml)" },
@@ -148,7 +148,7 @@ export const productsData = [
     tag: "Rilis Terbaru",
     rating: 4.9,
     reviewCount: 94,
-    image: "image/foto4.jpeg",
+    image: "/image/foto4.jpeg",
     description: "Terinspirasi hembusan angin laut Mandeh dan Pesisir Selatan. Paduan garam mineral samudera, jeruk purut tropis, daun mint dingin, dan sentuhan driftwood yang membangkitkan energi kesegaran alami.",
     variants: [
       { size: "30ml", price: 35000, label: "Travel Size (30ml)" },
@@ -193,7 +193,7 @@ export const productsData = [
     tag: "Favorit Baru",
     rating: 4.9,
     reviewCount: 108,
-    image: "image/foto5.jpeg",
+    image: "/image/foto5.jpeg",
     description: "Kombinasi menggoda caramel praline, madu hutan Sumatera, kelopak mawar merah muda, dan bourbon vanilla. Menghadirkan wangi manis mewah yang lembut, hangat, dan menempel sepanjang hari.",
     variants: [
       { size: "30ml", price: 35000, label: "Travel Size (30ml)" },
