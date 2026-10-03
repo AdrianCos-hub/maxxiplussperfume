@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, ShoppingBag, Sparkles, Clock, Compass, ShieldCheck } from 'lucide-react';
+import { X, ShoppingBag, Sparkles, Clock, Compass } from 'lucide-react';
 import { PerfumeProduct, Variant } from '../types';
 import { formatRupiah } from '../data/perfumes';
 

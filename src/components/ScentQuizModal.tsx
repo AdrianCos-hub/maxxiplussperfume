@@ -49,7 +49,7 @@ export const ScentQuizModal: React.FC<ScentQuizModalProps> = ({
     },
   ];
 
-  const handleSelectOption = (index: number, optionVal: string) => {
+  const handleSelectOption = (_index: number, optionVal: string) => {
     const newAnswers = { ...answers };
     if (step === 0) newAnswers.vibe = optionVal;
     if (step === 1) newAnswers.gender = optionVal;
