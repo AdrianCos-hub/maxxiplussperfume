@@ -1,0 +1,19 @@
+/* Custom Transparent Scrollbar Track */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(12, 6, 3, 0.4);
+  border-radius: 9999px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.25);
+  border-radius: 9999px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.5);
+}

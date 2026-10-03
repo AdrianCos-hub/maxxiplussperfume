@@ -1,0 +1,6 @@
+{
+  "name": "MAXXIPLUSS Perfume",
+  "description": "Website resmi MAXXIPLUSS Perfume - Editorial wewangian botani mewah diracik di Painan, Sumatera Barat dari kayu manis, cengkeh alami, dan resin hangat.",
+  "requestFramePermissions": [],
+  "capabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

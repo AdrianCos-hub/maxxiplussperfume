@@ -3,212 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MAXXIPLUSS Perfume</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>MAXXIPLUSS — PARFUM REMPAH ALAMI INDONESIA</title>
+    <meta
+      name="description"
+      content="Editorial wewangian botani mewah. Diracik di Painan, Sumatera Barat dari kayu manis, cengkeh alami, dan resin hangat berkualitas tinggi."
+    />
+    <meta property="og:title" content="MAXXIPLUSS — PARFUM REMPAH ALAMI INDONESIA" />
+    <meta
+      property="og:description"
+      content="Editorial wewangian botani mewah. Diracik di Painan, Sumatera Barat."
+    />
+    <meta property="og:image" content="image/logo.png" />
     <link rel="icon" type="image/png" href="image/logo.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <!-- AOS Scroll Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <!-- Particles JS -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <!-- Cormorant Garamond & Plus Jakarta Sans Typefaces -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!-- Background Particles -->
-    <div id="particles-js"></div>
-
-    <!-- NAVBAR -->
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="#" class="logo-btn">MAXXIPLUSS</a>
-
-        <ul class="nav-menu">
-          <li><a href="#produk">Produk</a></li>
-          <li><a href="#tentang">Tentang</a></li>
-          <li><a href="#lokasi">Lokasi</a></li>
-        </ul>
-
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-      </div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-content" data-aos="zoom-in">
-        <img src="image/logo.png" class="logo" alt="Logo MAXXIPLUSS" />
-        <h1>MAXXIPLUSS Perfume</h1>
-        <p>Wangi Tahan Lama · Harga Terjangkau · Kualitas Premium</p>
-        <br />
-        <a href="#produk" class="btn-primary">Lihat Produk</a>
-      </div>
-    </section>
-
-    <!-- PRODUK -->
-    <section id="produk" class="section">
-      <h2 data-aos="fade-up">Produk Unggulan</h2>
-
-      <div class="cards">
-        <div class="card" data-aos="fade-up">
-          <img src="image/foto1.jpeg" alt="" />
-          <h3>Parfum Pria</h3>
-          <p>Aroma maskulin & elegan</p>
-          <h4>Rp 35.000</h4>
-          <button onclick="orderWA('Parfum Pria - Rp35.000')">
-            Order Sekarang
-          </button>
-        </div>
-
-        <div class="card" data-aos="fade-up" data-aos-delay="200">
-          <img src="image/foto2.jpeg" alt="" />
-          <h3>Parfum Wanita</h3>
-          <p>Wangi manis & fresh</p>
-          <h4>Rp 35.000</h4>
-          <button onclick="orderWA('Parfum Wanita - Rp35.000')">
-            Order Sekarang
-          </button>
-        </div>
-
-        <div class="card" data-aos="fade-up" data-aos-delay="400">
-          <img src="image/foto3.jpeg" alt="" />
-          <h3>Parfum Premium</h3>
-          <p>Tahan hingga 24 Jam</p>
-          <h4>Rp 50.000</h4>
-          <button onclick="orderWA('Parfum Premium - Rp50.000')">
-            Order Sekarang
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- TENTANG -->
-    <section id="tentang" class="section tentang-premium">
-      <div class="tentang-container">
-        <div class="tentang-text">
-          <h2>Our Essence</h2>
-          <div class="line"></div>
-
-          <p>
-            MAXXIPLUSS Perfume menghadirkan harmoni aroma yang terinspirasi dari
-            kekayaan rempah-rempah alami Indonesia. Setiap varian diracik dengan
-            sentuhan elegan untuk menciptakan wangi yang berkelas, tahan lama,
-            dan mencerminkan karakter yang percaya diri.
-          </p>
-
-          <p>
-            Kami percaya bahwa parfum bukan sekadar wewangian, tetapi identitas.
-            Dengan kombinasi bahan alami seperti kayu manis, cengkeh, bunga, dan
-            sentuhan woody yang hangat, MAXXIPLUSS menghadirkan pengalaman aroma
-            yang lembut, mewah, dan berkesan.
-          </p>
-
-          <p>
-            Diproduksi oleh UMKM lokal di Painan, kami berkomitmen memberikan
-            kualitas premium dengan harga terjangkau — karena setiap orang
-            berhak tampil harum dan elegan setiap hari.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- LOKASI -->
-    <section id="lokasi" class="section lokasi-premium">
-      <h2 class="section-title">Lokasi Outlet</h2>
-
-      <div class="lokasi-container">
-        <!-- Outlet Painan -->
-        <div class="lokasi-card">
-          <h3>Outlet Painan</h3>
-          <p>📍 Painan, Sumatera Barat</p>
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=Outlet+Maxxipluss+Painan"
-            target="_blank"
-            class="lokasi-btn"
-          >
-            Lihat di Maps
-          </a>
-        </div>
-
-        <!-- Outlet Kambang -->
-        <div class="lokasi-card">
-          <h3>Outlet Kambang</h3>
-          <p>📍 Jln. Raya Padang–Bengkulu</p>
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=Jln+Raya+Padang+Bengkulu+Kambang"
-            target="_blank"
-            class="lokasi-btn"
-          >
-            Lihat di Maps
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <a href="https://wa.me/6282284033320" class="wa-float" target="_blank"
-      >💬</a
-    >
-
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <footer class="footer-premium">
-      <div class="footer-container">
-        <!-- Brand -->
-        <div class="footer-col">
-          <h3 class="footer-logo">MAXXIPLUSS</h3>
-          <p>
-            Parfum premium berbahan rempah alami Indonesia. Hadir untuk
-            memberikan kesan elegan, percaya diri, dan berkelas setiap hari.
-          </p>
-        </div>
-
-        <!-- Menu -->
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#produk">Produk</a></li>
-            <li><a href="#tentang">Tentang</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact -->
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <p>📍 Painan, Sumatera Barat</p>
-          <p>📍 Jln. Raya Padang–Bengkulu</p>
-          <a
-            href="https://wa.me/6281234567890"
-            target="_blank"
-            class="footer-wa"
-          >
-            📞 0812-3456-7890 </a
-          ><br />
-          <a href="mailto:maxxipluss@gmail.com" class="footer-email">
-            ✉ maxxipluss@gmail.com </a
-          ><br />
-          <a
-            href="https://instagram.com/maxxiplussperfumesofficial"
-            target="_blank"
-            class="footer-ig"
-          >
-            <i class="fab fa-instagram"></i>maxxiplussperfumesofficial
-          </a>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div class="footer-line"></div>
-        <p>© 2026 MAXXIPLUSS Perfume. All Rights Reserved.</p>
-      </div>
-    </footer>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
